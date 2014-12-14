@@ -1,7 +1,7 @@
 #!/bin/bash
 
 yum -y install epel-release
-yum -y install ansible git
+yum -y install ansible libselinux-python git
 
 if id ansible >/dev/null 2>&1; then
     userdel ansible
