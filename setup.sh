@@ -11,4 +11,4 @@ rm -rf /etc/ansible
 useradd -d /etc/ansible -m -r -s /bin/bash ansible
 rm -rf /etc/ansible/.??* /etc/ansible/*
 
-su - ansible -c "git clone https://github.com/Hilco-Wijbenga/ansible.git .
+su - ansible -c "git clone https://github.com/Hilco-Wijbenga/ansible.git ."
