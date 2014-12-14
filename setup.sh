@@ -18,3 +18,8 @@ cat >/etc/hosts <<EOF
 ::1         localhost localhost.localdomain localhost6 localhost6.localdomain6
 10.0.2.15   devbox    devbox.cavebeetle.org
 EOF
+
+/etc/ansible/init-root-ssh.sh
+/etc/ansible/init-ansible-ssh.sh
+
+su - ansible -c "ansible -vvvv all -m ping"
