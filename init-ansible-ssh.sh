@@ -5,4 +5,5 @@ chmod u=rw,go=  /etc/ansible/.ssh/id_rsa
 chmod u=rw,go=r /etc/ansible/.ssh/id_rsa.pub
 
 cp /etc/ansible/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+chmod u=rw,go= /root/.ssh/authorized_keys
 restorecon -R -v /root/.ssh
