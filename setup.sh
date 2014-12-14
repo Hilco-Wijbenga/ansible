@@ -19,7 +19,14 @@ cat >/etc/hosts <<EOF
 10.0.2.15   devbox    devbox.cavebeetle.org
 EOF
 
-/etc/ansible/init-root-ssh.sh
-/etc/ansible/init-ansible-ssh.sh
+rm -rf /root/.ssh
+ssh-keygen -t rsa -f /root/.ssh/id_rsa -N ''
+
+chmod u=rwx,go= /etc/ansible/.ssh
+chmod u=rw,go=  /etc/ansible/.ssh/id_rsa
+chmod u=rw,go=r /etc/ansible/.ssh/id_rsa.pub
+cp /etc/ansible/.ssh/id_rsa.pub /root/.ssh/authorized_keys
+chmod u=rw,go= /root/.ssh/authorized_keys
+restorecon -R -v /root/.ssh
 
 su - ansible -c "ansible -vvvv all -m ping"
