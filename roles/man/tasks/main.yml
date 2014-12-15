@@ -1,0 +1,4 @@
+- name: Install the latest version of Man.
+  yum: name=man state=latest
+  tags:
+    - man

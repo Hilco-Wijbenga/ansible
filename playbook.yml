@@ -2,5 +2,6 @@
 - hosts: all
   roles:
     - etc-hosts
+    - man
     - tree
     - vim
