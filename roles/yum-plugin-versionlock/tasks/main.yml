@@ -1,4 +1,4 @@
 - name: Install Yum plugin "versionlock"
   yum: name=yum-plugin-versionlock state=latest
-    tags:
-      - yum-plugin-versionlock
+  tags:
+    - yum-plugin-versionlock
