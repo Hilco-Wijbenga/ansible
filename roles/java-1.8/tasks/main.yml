@@ -1,0 +1,14 @@
+- name: Install JDK 1.8.0-25
+  yum:
+    name=java-1.8.0-openjdk-devel-1.8.0.25-3.b17.el6_6
+    state=present
+  tags:
+    - java-1.8
+
+- name: Lock JDK version to 1.8.0-25
+  lineinfile:
+    dest=/etc/yum/pluginconf.d/versionlock.list
+    regexp=^0:java-1.8.0-openjdk-devel-
+    line=0:java-1.8.0-openjdk-devel-1.8.0.25-3.b17.el6_6.*
+  tags:
+    - java-1.8
