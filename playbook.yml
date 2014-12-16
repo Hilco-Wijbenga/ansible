@@ -3,6 +3,7 @@
   roles:
     - etc-hosts
     - java-1.6
+    - java-1.7
     - man
     - tree
     - vim
