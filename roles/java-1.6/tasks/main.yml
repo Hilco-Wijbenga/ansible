@@ -1,0 +1,14 @@
+- name: Install JDK 1.6.0-33
+  yum:
+    name=java-1.6.0-openjdk-devel-1.6.0.33-1.13.5.1.el6_6
+    state=present
+  tags:
+    - java-1.6
+
+- name: Lock JDK version to 1.6.0-33
+  lineinfile:
+    dest=/etc/yum/pluginconf.d/versionlock.list
+    regexp=^1:java-1.6.0-openjdk-devel-
+    line=1:java-1.6.0-openjdk-devel-1.6.0.33-1.13.5.1.el6_6.*
+  tags:
+    - java-1.6

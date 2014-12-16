@@ -2,6 +2,7 @@
 - hosts: all
   roles:
     - etc-hosts
+    - java-1.6
     - man
     - tree
     - vim
