@@ -5,6 +5,7 @@
     - java-1.6
     - java-1.7
     - java-1.8
+    - java-alternatives
     - man
     - tree
     - vim

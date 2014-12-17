@@ -1,0 +1,5 @@
+---
+dependencies:
+  - { role: java-1.6 }
+  - { role: java-1.7 }
+  - { role: java-1.8 }

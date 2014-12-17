@@ -1,0 +1,8 @@
+auto
+/usr/lib/jvm/java-1.6.0
+java_sdk_1.6.0_exports
+/usr/lib/jvm-exports/java-1.6.0
+
+/usr/lib/jvm/java-1.6.0-openjdk.x86_64
+999999
+/usr/lib/jvm-exports/java-1.6.0-openjdk.x86_64

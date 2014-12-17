@@ -1,0 +1,153 @@
+- name: Create JDK symbolic links in /usr/lib and /usr/share
+  file:
+    src={{ item.src }}
+    dest={{ item.dest }}
+    state=link
+  with_items:
+    - { dest: '/usr/lib/jvm-exports/java-1.6.0-openjdk.x86_64',           src: '/etc/alternatives/java_sdk_1.6.0_exports' }
+    - { dest: '/usr/lib/jvm-exports/java-1.6.0-openjdk.x86_64',           src: '/etc/alternatives/java_sdk_exports' }
+    - { dest: '/usr/lib/jvm-exports/java-1.6.0-openjdk.x86_64',           src: '/etc/alternatives/java_sdk_openjdk_exports' }
+    - { dest: '/usr/lib/jvm-exports/jre-1.6.0-openjdk.x86_64',            src: '/etc/alternatives/jre_1.6.0_exports' }
+    - { dest: '/usr/lib/jvm-exports/jre-1.6.0-openjdk.x86_64',            src: '/etc/alternatives/jre_exports' }
+    - { dest: '/usr/lib/jvm-exports/jre-1.6.0-openjdk.x86_64',            src: '/etc/alternatives/jre_openjdk_exports' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/appletviewer',  src: '/etc/alternatives/appletviewer' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/apt',           src: '/etc/alternatives/apt' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/extcheck',      src: '/etc/alternatives/extcheck' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jarsigner',     src: '/etc/alternatives/jarsigner' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jar',           src: '/etc/alternatives/jar' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javac',         src: '/etc/alternatives/javac' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javadoc',       src: '/etc/alternatives/javadoc' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javah',         src: '/etc/alternatives/javah' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/javap',         src: '/etc/alternatives/javap' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jconsole',      src: '/etc/alternatives/jconsole' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jdb',           src: '/etc/alternatives/jdb' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jhat',          src: '/etc/alternatives/jhat' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jinfo',         src: '/etc/alternatives/jinfo' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jmap',          src: '/etc/alternatives/jmap' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jps',           src: '/etc/alternatives/jps' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jrunscript',    src: '/etc/alternatives/jrunscript' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jsadebugd',     src: '/etc/alternatives/jsadebugd' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jstack',        src: '/etc/alternatives/jstack' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jstatd',        src: '/etc/alternatives/jstatd' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/jstat',         src: '/etc/alternatives/jstat' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/native2ascii',  src: '/etc/alternatives/native2ascii' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/policytool',    src: '/etc/alternatives/policytool' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/rmic',          src: '/etc/alternatives/rmic' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/schemagen',     src: '/etc/alternatives/schemagen' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/serialver',     src: '/etc/alternatives/serialver' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/wsgen',         src: '/etc/alternatives/wsgen' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/wsimport',      src: '/etc/alternatives/wsimport' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64/bin/xjc',           src: '/etc/alternatives/xjc' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64',                   src: '/etc/alternatives/java_sdk' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64',                   src: '/etc/alternatives/java_sdk_1.6.0' }
+    - { dest: '/usr/lib/jvm/java-1.6.0-openjdk.x86_64',                   src: '/etc/alternatives/java_sdk_openjdk' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/java',           src: '/etc/alternatives/java' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/keytool',        src: '/etc/alternatives/keytool' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/orbd',           src: '/etc/alternatives/orbd' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/pack200',        src: '/etc/alternatives/pack200' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/rmid',           src: '/etc/alternatives/rmid' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/rmiregistry',    src: '/etc/alternatives/rmiregistry' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/servertool',     src: '/etc/alternatives/servertool' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/tnameserv',      src: '/etc/alternatives/tnameserv' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64/bin/unpack200',      src: '/etc/alternatives/unpack200' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64',                    src: '/etc/alternatives/jre' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64',                    src: '/etc/alternatives/jre_1.6.0' }
+    - { dest: '/usr/lib/jvm/jre-1.6.0-openjdk.x86_64',                    src: '/etc/alternatives/jre_openjdk' }
+    - { dest: '/usr/share/man/man1/appletviewer-java-1.6.0-openjdk.1.gz', src: '/etc/alternatives/appletviewer.1.gz' }
+    - { dest: '/usr/share/man/man1/apt-java-1.6.0-openjdk.1.gz',          src: '/etc/alternatives/apt.1.gz' }
+    - { dest: '/usr/share/man/man1/extcheck-java-1.6.0-openjdk.1.gz',     src: '/etc/alternatives/extcheck.1.gz' }
+    - { dest: '/usr/share/man/man1/jar-java-1.6.0-openjdk.1.gz',          src: '/etc/alternatives/jar.1.gz' }
+    - { dest: '/usr/share/man/man1/jarsigner-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/jarsigner.1.gz' }
+    - { dest: '/usr/share/man/man1/javac-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/javac.1.gz' }
+    - { dest: '/usr/share/man/man1/javadoc-java-1.6.0-openjdk.1.gz',      src: '/etc/alternatives/javadoc.1.gz' }
+    - { dest: '/usr/share/man/man1/javah-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/javah.1.gz' }
+    - { dest: '/usr/share/man/man1/java-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/java.1.gz' }
+    - { dest: '/usr/share/man/man1/javap-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/javap.1.gz' }
+    - { dest: '/usr/share/man/man1/jconsole-java-1.6.0-openjdk.1.gz',     src: '/etc/alternatives/jconsole.1.gz' }
+    - { dest: '/usr/share/man/man1/jdb-java-1.6.0-openjdk.1.gz',          src: '/etc/alternatives/jdb.1.gz' }
+    - { dest: '/usr/share/man/man1/jhat-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/jhat.1.gz' }
+    - { dest: '/usr/share/man/man1/jinfo-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/jinfo.1.gz' }
+    - { dest: '/usr/share/man/man1/jmap-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/jmap.1.gz' }
+    - { dest: '/usr/share/man/man1/jps-java-1.6.0-openjdk.1.gz',          src: '/etc/alternatives/jps.1.gz' }
+    - { dest: '/usr/share/man/man1/jrunscript-java-1.6.0-openjdk.1.gz',   src: '/etc/alternatives/jrunscript.1.gz' }
+    - { dest: '/usr/share/man/man1/jsadebugd-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/jsadebugd.1.gz' }
+    - { dest: '/usr/share/man/man1/jstack-java-1.6.0-openjdk.1.gz',       src: '/etc/alternatives/jstack.1.gz' }
+    - { dest: '/usr/share/man/man1/jstatd-java-1.6.0-openjdk.1.gz',       src: '/etc/alternatives/jstatd.1.gz' }
+    - { dest: '/usr/share/man/man1/jstat-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/jstat.1.gz' }
+    - { dest: '/usr/share/man/man1/keytool-java-1.6.0-openjdk.1.gz',      src: '/etc/alternatives/keytool.1.gz' }
+    - { dest: '/usr/share/man/man1/native2ascii-java-1.6.0-openjdk.1.gz', src: '/etc/alternatives/native2ascii.1.gz' }
+    - { dest: '/usr/share/man/man1/orbd-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/orbd.1.gz' }
+    - { dest: '/usr/share/man/man1/pack200-java-1.6.0-openjdk.1.gz',      src: '/etc/alternatives/pack200.1.gz' }
+    - { dest: '/usr/share/man/man1/policytool-java-1.6.0-openjdk.1.gz',   src: '/etc/alternatives/policytool.1.gz' }
+    - { dest: '/usr/share/man/man1/rmic-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/rmic.1.gz' }
+    - { dest: '/usr/share/man/man1/rmid-java-1.6.0-openjdk.1.gz',         src: '/etc/alternatives/rmid.1.gz' }
+    - { dest: '/usr/share/man/man1/rmiregistry-java-1.6.0-openjdk.1.gz',  src: '/etc/alternatives/rmiregistry.1.gz' }
+    - { dest: '/usr/share/man/man1/schemagen-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/schemagen.1.gz' }
+    - { dest: '/usr/share/man/man1/serialver-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/serialver.1.gz' }
+    - { dest: '/usr/share/man/man1/servertool-java-1.6.0-openjdk.1.gz',   src: '/etc/alternatives/servertool.1.gz' }
+    - { dest: '/usr/share/man/man1/tnameserv-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/tnameserv.1.gz' }
+    - { dest: '/usr/share/man/man1/unpack200-java-1.6.0-openjdk.1.gz',    src: '/etc/alternatives/unpack200.1.gz' }
+    - { dest: '/usr/share/man/man1/wsgen-java-1.6.0-openjdk.1.gz',        src: '/etc/alternatives/wsgen.1.gz' }
+    - { dest: '/usr/share/man/man1/wsimport-java-1.6.0-openjdk.1.gz',     src: '/etc/alternatives/wsimport.1.gz' }
+    - { dest: '/usr/share/man/man1/xjc-java-1.6.0-openjdk.1.gz',          src: '/etc/alternatives/xjc.1.gz' }
+  tags:
+    - java-alternatives
+
+- name: Create JDK symbolic links in /usr/bin
+  file:
+    src={{ item.src }}
+    dest={{ item.dest }}
+    state=link
+  with_items:
+    - { dest: '/usr/bin/appletviewer', src: '/etc/alternatives/appletviewer' }
+    - { dest: '/usr/bin/extcheck',     src: '/etc/alternatives/extcheck'     }
+    - { dest: '/usr/bin/jar',          src: '/etc/alternatives/jar'          }
+    - { dest: '/usr/bin/jarsigner',    src: '/etc/alternatives/jarsigner'    }
+    - { dest: '/usr/bin/java',         src: '/etc/alternatives/java'         }
+    - { dest: '/usr/bin/javac',        src: '/etc/alternatives/javac'        }
+    - { dest: '/usr/bin/javadoc',      src: '/etc/alternatives/javadoc'      }
+    - { dest: '/usr/bin/javah',        src: '/etc/alternatives/javah'        }
+    - { dest: '/usr/bin/javap',        src: '/etc/alternatives/javap'        }
+    - { dest: '/usr/bin/jconsole',     src: '/etc/alternatives/jconsole'     }
+    - { dest: '/usr/bin/jdb',          src: '/etc/alternatives/jdb'          }
+    - { dest: '/usr/bin/jhat',         src: '/etc/alternatives/jhat'         }
+    - { dest: '/usr/bin/jinfo',        src: '/etc/alternatives/jinfo'        }
+    - { dest: '/usr/bin/jmap',         src: '/etc/alternatives/jmap'         }
+    - { dest: '/usr/bin/jps',          src: '/etc/alternatives/jps'          }
+    - { dest: '/usr/bin/jrunscript',   src: '/etc/alternatives/jrunscript'   }
+    - { dest: '/usr/bin/jsadebugd',    src: '/etc/alternatives/jsadebugd'    }
+    - { dest: '/usr/bin/jstack',       src: '/etc/alternatives/jstack'       }
+    - { dest: '/usr/bin/jstat',        src: '/etc/alternatives/jstat'        }
+    - { dest: '/usr/bin/jstatd',       src: '/etc/alternatives/jstatd'       }
+    - { dest: '/usr/bin/keytool',      src: '/etc/alternatives/keytool'      }
+    - { dest: '/usr/bin/native2ascii', src: '/etc/alternatives/native2ascii' }
+    - { dest: '/usr/bin/orbd',         src: '/etc/alternatives/orbd'         }
+    - { dest: '/usr/bin/pack200',      src: '/etc/alternatives/pack200'      }
+    - { dest: '/usr/bin/policytool',   src: '/etc/alternatives/policytool'   }
+    - { dest: '/usr/bin/rmic',         src: '/etc/alternatives/rmic'         }
+    - { dest: '/usr/bin/rmid',         src: '/etc/alternatives/rmid'         }
+    - { dest: '/usr/bin/rmiregistry',  src: '/etc/alternatives/rmiregistry'  }
+    - { dest: '/usr/bin/schemagen',    src: '/etc/alternatives/schemagen'    }
+    - { dest: '/usr/bin/serialver',    src: '/etc/alternatives/serialver'    }
+    - { dest: '/usr/bin/servertool',   src: '/etc/alternatives/servertool'   }
+    - { dest: '/usr/bin/tnameserv',    src: '/etc/alternatives/tnameserv'    }
+    - { dest: '/usr/bin/unpack200',    src: '/etc/alternatives/unpack200'    }
+    - { dest: '/usr/bin/wsgen',        src: '/etc/alternatives/wsgen'        }
+    - { dest: '/usr/bin/wsimport',     src: '/etc/alternatives/wsimport'     }
+    - { dest: '/usr/bin/xjc',          src: '/etc/alternatives/xjc'          }
+  tags:
+    - java-alternatives
+
+- name: Set priorities for alternatives
+  copy:
+    src={{ item }}
+    dest=/var/lib/alternatives/{{ item }}
+  with_itmes:
+    - java
+    - javac
+    - java_sdk_1.6.0
+    - java_sdk_openjdk
+    - jre_1.6.0
+    - jre_openjdk
+  tags:
+    - java-alternatives
