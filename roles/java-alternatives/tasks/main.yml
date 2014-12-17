@@ -142,7 +142,7 @@
   copy:
     src={{ item }}
     dest=/var/lib/alternatives/{{ item }}
-  with_itmes:
+  with_items:
     - java
     - javac
     - java_sdk_1.6.0
